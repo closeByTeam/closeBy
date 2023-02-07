@@ -1,0 +1,185 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: block;
+    background-image: url(/img/home-page-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: ZonaBlack;
+    src: url(/font/Zona-Pro/ZonaPro-Black.otf);
+}
+
+@font-face {
+    font-family: Zona;
+    src: url(/font/Zona-Pro/ZonaPro-SemiBold.otf);
+}
+
+header {
+    position: absolute;
+    display: block;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.navbar ul{
+    list-style: none;
+    float: right;
+    padding-right: 20px;
+    margin: 0;
+    margin-right: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar {
+    display: inline-block;
+    width: 100%;
+    background-color: #7704ba;
+    height: 140px;
+    position: relative;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navButton{
+    font-family: ZonaBlack;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+
+}
+
+.whiteButton{
+    font-family: ZonaBlack;
+    outline: white;
+    color: #7704ba;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+    position: relative;
+
+}
+
+.whiteLogo{
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+.content {
+    padding-top: 200px;
+    margin: auto;
+}
+
+.content h1 {
+    color: #7704ba;
+    font-family: ZonaBlack;
+    text-align: center;
+    font-size: 45px;
+}
+
+.eventlist {
+    font-family: ZonaBlack;
+    color: white;
+    list-style: none;
+    background-color: #7704ba;
+    border-radius: 40px;
+    padding: 20px 30px;
+    margin: 40px 40px;
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.lctn {
+
+}
+.cte {
+    margin-bottom: 20px;
+
+}
+
+.nme {
+    font-size: 23px;
+    color: #d4b4e6;
+}
+
+footer{
+    position: absolute;
+    top: 690px;
+    height: 220px;
+    width: 100%;
+}
+
+.foot {
+    height: 200px;
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.foot h3 {
+    color: white;
+    font-family: Zona;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.socials {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    left: 50px;
+}
+
+.socials a {
+    margin: 5px;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #d4b4e6;
+}
+
+.footerButton{
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #7704ba;
+    color: white;
+    font-family: ZonaBlack;
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.footerButton:hover{
+    background-color: grey;
+}
+
+.footerButton:focus{
+    background-color: grey;
+}

@@ -1,0 +1,239 @@
+* {
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: ZonaBlack;
+    src: url(/font/Zona-Pro/ZonaPro-Black.otf);
+}
+
+@font-face {
+    font-family: Zona;
+    src: url(/font/Zona-Pro/ZonaPro-SemiBold.otf);
+}
+
+header {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.navbar ul{
+    list-style: none;
+    float: right;
+    padding-right: 20px;
+    margin: 0;
+    margin-right: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    height: 140px;
+    position: relative;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navButton{
+    font-family: ZonaBlack;
+    color: #7704ba;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.navButton:hover{
+    color: grey;
+}
+
+.navButton:focus{
+    color: grey;
+}
+
+.userButton{
+    position: relative;
+    margin: 15px;
+    top: 16px;
+}
+
+.purpleLogo{
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+/*Body*/ 
+
+.Background{
+    background-image: url(/img/host-page-bg.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin-top: 150px;
+    position: absolute;
+}
+
+.newEventText{
+    font-family: ZonaBlack;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    top: 10px;
+}
+
+/*Form*/
+.eventForm{
+    position: relative;
+    background-color: white;
+    width: 85%;
+    height: 450px;
+    border-radius: 40px;
+    left: 100px;
+}
+
+.eventForm label{
+    color: #7704ba;
+    font-family: ZonaBlack;
+    font-size: 36px;
+    text-align: right;
+    display: inline-block;
+    width: 300px;
+}
+
+.formContent{
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+
+.purpleInput{
+    color: white;
+    background-color: #7704ba;
+    border-radius: 15px;
+    height: 30px;
+    width: 400px;
+}
+
+.purpleCategories{
+    color: white;
+    background-color: #7704ba;
+    border-radius: 0px;
+    height: 30px;
+    width: 400px;
+    text-align: center;
+}
+
+.formButton{
+    font-family: ZonaBlack;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: #7704ba;
+    padding: 10px 30px;
+    border-radius: 15px;
+    position: relative;
+    left: 350px;
+    top: 40px;
+}
+
+.formButton:hover{
+    background-color: grey;
+}
+
+.formButton:focus{
+    background-color: grey;
+}
+
+.eventForm ::placeholder{
+    color: white;
+    text-align: center;
+    font-family: Zona;
+    font-size: 20px;
+}
+
+/*Footer*/
+
+footer{
+    position: absolute;
+    top: 600px;
+    height: 220px;
+    width: 100%;
+}
+
+.foot {
+    height: 200px;
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.foot h3 {
+    color: white;
+    font-family: Zona;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.socials {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    left: 50px;
+}
+
+.socials a {
+    margin: 5px;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #d4b4e6;
+}
+
+.footerButton{
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #7704ba;
+    color: white;
+    font-family: ZonaBlack;
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.footerButton:hover{
+    background-color: grey;
+}
+
+.footerButton:focus{
+    background-color: grey;
+}
