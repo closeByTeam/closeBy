@@ -32,47 +32,45 @@ const querySnapshot = await getDocs(colRef);
 querySnapshot.forEach((doc) => {
     events.push(doc);
     let eventList = document.getElementById("eventList");
-    events.forEach((item) => {
-        var data = doc.data();
-        var name = data.name;
-        var categories = data.categories;
-        var date = data.date
-        var location = data.location;
-        var time = data.time;
-        var description = data.description;
+    var data = doc.data();
+    var name = data.name;
+    var categories = data.categories;
+    var date = data.date
+    var location = data.location;
+    var time = data.time;
+    var description = data.description;
 
-        let nameListItem = document.createElement("li");
-        nameListItem.innerText = name;
-        nameListItem.classList.add("nme");
+    let nameListItem = document.createElement("li");
+    nameListItem.innerText = name;
+    nameListItem.classList.add("nme");
 
-        let categoriesListItem = document.createElement("li");
-        categoriesListItem.innerText = categories;
-        categoriesListItem.classList.add("cte");
+    let categoriesListItem = document.createElement("li");
+    categoriesListItem.innerText = categories;
+    categoriesListItem.classList.add("cte");
 
-        let dateListItem = document.createElement("li");
-        dateListItem.innerText = date;
-        dateListItem.classList.add("dte");
+    let dateListItem = document.createElement("li");
+    dateListItem.innerText = date;
+    dateListItem.classList.add("dte");
 
-        let locationListItem = document.createElement("li");
-        locationListItem.innerText = location;
-        locationListItem.classList.add("lctn");
+    let locationListItem = document.createElement("li");
+    locationListItem.innerText = location;
+    locationListItem.classList.add("lctn");
 
-        let timeListItem = document.createElement("li");
-        timeListItem.innerText = time;
-        timeListItem.classList.add("tme");
+    let timeListItem = document.createElement("li");
+    timeListItem.innerText = time;
+    timeListItem.classList.add("tme");
 
-        let descriptionListItem = document.createElement("li");
-        descriptionListItem.innerText = description;
-        descriptionListItem.classList.add("dsc");
+    let descriptionListItem = document.createElement("li");
+    descriptionListItem.innerText = description;
+    descriptionListItem.classList.add("dsc");
 
-        eventList.append(nameListItem);
-        eventList.append(categoriesListItem);
-        eventList.append(dateListItem);
-        eventList.append(timeListItem);
-        eventList.append(locationListItem);
-        eventList.append(descriptionListItem);
-    })
-})
+    eventList.append(nameListItem);
+    eventList.append(categoriesListItem);
+    eventList.append(dateListItem);
+    eventList.append(timeListItem);
+    eventList.append(locationListItem);
+    eventList.append(descriptionListItem);
+});
 
 getDocs(colRef)
     .then((snapshot) => {
@@ -84,4 +82,4 @@ getDocs(colRef)
     })
     .catch(err => {
         console.log(err.message)
-    })
+    });
