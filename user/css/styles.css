@@ -130,8 +130,9 @@ header {
 .event h1{
     color: #7704ba;
     font-family: ZonaBlack;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
+    margin-top: -100px;
 }
 
 .event a {
