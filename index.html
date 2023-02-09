@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,20 @@
     <title>CloseBy</title>
     <link rel="stylesheet" href="/user/css/styles.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
-             <a class="logobtn" href="./index.html"><img class="whiteLogo"src="/img/white-logo.png" alt="WhiteLogo"> </a>
-             <ul>
-                 <li><a class="navButton" href="/user/support.html">support</a></li>
-                 <li><a class="navButton" href="/user/aboutus.html">about us</a></li>
-             </ul>
+            <a class="logobtn" href="./index.html"><img class="whiteLogo" src="/img/white-logo.png" alt="WhiteLogo">
+            </a>
+            <ul>
+                <li><a class="navButton" href="/user/support.html">support</a></li>
+                <li><a class="navButton" href="/user/aboutus.html">about us</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="event">
+    <div class="event" id="componentContainer"> <!--change this id when you actually create the component to the id you reference in the component-->
         <h1>search for an event</h1>
         <div class="look-for-event">
             <img src="/icons/search.svg" alt="" width="40px">
@@ -29,28 +32,39 @@
             <h3>what are you looking for?</h3>
             <form action="./user/searchresults.html">
                 <section class="formContent">
-                    <select class="purpleCategories" id="categories" name="categories" placeholder="select relevant categories" multiple>
+                    <select class="purpleCategories" id="categories" name="categories"
+                        placeholder="select relevant categories" multiple>
                         <option value="Music">Music</option>
                         <option value="Food">Food</option>
                         <option value="Sports">Sports</option>
                         <option value="Art">Art</option>
                         <option value="Fundraisers">Fundraisers</option>
                         <option value="Conferences">Conferences</option>
-                    <input class="formButton" type="submit" value="go!">
+                        <input class="formButton" type="submit" value="go!">
                 </section>
             </form>
-        </div>
 
+            <!-- Load React. -->
+            <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+            <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-    <footer>
-        <div class="foot">
-            <h3>connect with us!</h3>
-            <div class="socials">
-                <a href="">instagram</a>
-                <a href="">twitter</a>
-                <a href="">tiktok</a>
-            </div>
-        </div>
-    </footer>
+            <!-- Load our React component. -->
+            <script src="/ReactComponents/sampleComponent.js"></script><!--add your JS file to this directory and change the name of 'sampleComponent.js' to whatever you named that file-->
 </body>
+</div>
+
+
+<footer>
+    <div class="foot">
+        <h3>connect with us!</h3>
+        <div class="socials">
+            <a href="">instagram</a>
+            <a href="">twitter</a>
+            <a href="">tiktok</a>
+        </div>
+    </div>
+</footer>
+</body>
+
 </html>
