@@ -1,22 +1,24 @@
 import React, { useState} from "react";
-import ReactDOM from "react-dom/client";
-import { /** sampleComponent */} from "../ReactComponents/sampleComponent" /** replace sampleComponent to whatever the component is called */
-// import manageEvent from "../publisher/manageEvent";
-import Event from "../publisher/newEvent";
+import {
+    initializeReactContainer,
+    container,
+    render,
+} from "./publisherTestExtension.js";
+import {
+    Event
+} from "../publisher/newEvent";
+
 
 describe("event created", () => {
 
     beforeEach(() =>{
-        container = document.createElement("div");
-        document.body.replaceChildren(container);
+        initializeReactContainer();
     });
 
     it("event shows name of event", () => {
-        const event = {eventName: "Cambria County Fair"};
-        render(
-            <Event eventName={event} />
-        ); 
-
+        const eventName = {eventName: "Cambria County Fair"};
+        const component = (<Event eventName={eventName.eventName} />);
+        render(component); 
         expect(document.body).toContainText("Cambria County Fair");
         // expect(manageEvent).toContainText("Cambria County Fair");
     });
