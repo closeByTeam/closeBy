@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Event = ({ eventName, date, time, location, description, category,}) => (
+export const Event = ({ eventName, date, time, location, description, category, creator, contact}) => (
     <div id="eventView">
         <h3>Event:{" "} {eventName}</h3>
         <table>
@@ -25,7 +25,22 @@ export const Event = ({ eventName, date, time, location, description, category,}
                     <td>Event Type: </td>
                     <td>{category}</td>
                 </tr>
+                <tr>
+                    <td>Created By: </td>
+                    <td>{creator}</td>
+                </tr>
+                <tr>
+                    <td>Contact Information: </td>
+                    <td>{contact}</td>
+                </tr>
             </tbody>
         </table>
+    </div>
+);
+
+export const createEvent = ({}) => (
+    <div id="createEvent">
+        <button type="button">
+        </button>
     </div>
 );

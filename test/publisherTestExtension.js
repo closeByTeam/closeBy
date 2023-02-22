@@ -11,3 +11,10 @@ export const render = (component) =>
         act (() =>
             ReactDOM.createRoot(container).render(component)
         );
+
+export const click = (element) =>
+    act(() => element.click());
+
+export const element = (selector) => document.querySelector(selector);
+
+export const typesOf = (elements) => elements.map((element) => element.type);
