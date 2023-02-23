@@ -35,12 +35,13 @@ export const Event = ({ eventName, date, time, location, description, category, 
                 </tr>
             </tbody>
         </table>
+        <button type="button" id="modifyEvent">Modify Event</button>
+        <button type="button" id="deleteEvent">Delete Event</button>
     </div>
 );
 
-export const createEvent = ({}) => (
+export const CreateEvent = ({}) => (
     <div id="createEvent">
-        <button type="button">
-        </button>
+        <button type="button" id="createEvent">Create New Event</button>
     </div>
 );

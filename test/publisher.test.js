@@ -9,7 +9,7 @@ import {
 } from "./publisherTestExtension.js";
 import {
     Event,
-    createEvent
+    CreateEvent
 } from "../publisher/newEvent";
 
 
@@ -83,18 +83,35 @@ describe("event buttons", () => {
     });
 
     it("event was created", () => {
-        const component = (<createEvent/>)
+        const component = (<CreateEvent/>);
         render(component);
-        //should expect the button to exist, no funtionality is currently required
+        expect(
+            element(
+                 "button#createEvent"
+             )
+         ).not.toBeNull();
+        
     });
 
     it("event was deleted", () => {
 
-        //should expect the button to exist, no funtionality is currently required
+        const component = (<Event />);
+        render(component);
+        expect(
+            element(
+                 "button#deleteEvent"
+             )
+         ).not.toBeNull();
     });
 
     it("event was modified", () => {
         
-        //should expect the button to exist, no funtionality is currently required
+        const component = (<Event />);
+        render(component);
+        expect(
+            element(
+                 "button#modifyEvent"
+             )
+         ).not.toBeNull();
     });
 });
