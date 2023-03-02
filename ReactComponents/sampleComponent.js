@@ -1,1 +1,0 @@
-//this file will contain the javascript used for your react component
