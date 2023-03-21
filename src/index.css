@@ -13,6 +13,11 @@
   src: url(./font/Rotunda/Rotunda-Bold.ttf);
 }
 
+@font-face {
+  font-family: Helvetica;
+  src: url(./font/Helvetica/HelveticaNeue-Regular.otf)
+}
+
 .app-logo {
   height: 140px;
 }
