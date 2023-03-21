@@ -3,10 +3,6 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import * as React from 'react';
 
 function valuetext(value) {
@@ -33,24 +29,6 @@ export default function Slider2() {
       },
     },
   });
-  const marks = [
-    {
-      value: 0,
-      label: 'Today',
-    },
-    {
-      value: 7,
-      label: 'One Week',
-    },
-    {
-      value: 14,
-      label: 'Two Weeks',
-    },
-    {
-      value: 30,
-      label: 'One Month',
-    },
-  ];
 
   const [value1, setValue1] = React.useState([0, 15]);
 
@@ -97,11 +75,10 @@ export default function Slider2() {
         getAriaLabel={() => 'Minimum distance'}
         value={value1}
         onChange={handleChange1}
-        valueLabelDisplay="on"
+        valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
         color="secondary"
-        marks={marks}
       />
       <Typography id="input-slider" gutterBottom>
         Time (in days)
@@ -113,7 +90,7 @@ export default function Slider2() {
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
-        color="secondary"
+        color='secondary'
       />
     </Box>
     </div>

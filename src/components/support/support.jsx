@@ -1,13 +1,9 @@
-/* eslint-disable arrow-body-style */
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import "./support.css";
+import React from 'react'
 
 const support = () => {
-    return (
-        <div />
-    );
-};
+  return (
+    <div>support</div>
+  )
+}
 
-export default support;
+export default support

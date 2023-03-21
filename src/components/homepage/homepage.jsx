@@ -1,12 +1,13 @@
 /* eslint-disable arrow-body-style */
+import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Slider, Tags,} from '..';
+import { Slider, Tags,} from '..'
+
 import logo from "../../images/white-logo.png";
 
 
@@ -24,8 +25,6 @@ const ColorButton = styled(Button)(({ theme }) => ({
 const homepage = () => {
     return (
         <div className="app">
-        <body className="app-body">
-          <header className="app-header" />
           <h1><strong>find an event</strong></h1>
             <Slider />
             <Tags />
@@ -35,11 +34,10 @@ const homepage = () => {
                     }}
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href='http://google.com';
+                      window.location.href='/results';
                       }}
                     >go!</ColorButton>
             </Box>
-        </body>
       </div>
     );
 

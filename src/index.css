@@ -13,15 +13,10 @@
   src: url(./font/Rotunda/Rotunda-Bold.ttf);
 }
 
-
 .app-logo {
   height: 140px;
 }
 
-/*Header*/
-
-
-/*Body*/
 
 body{
   background-image: url(./assets/images/home-page-bg.jpg);

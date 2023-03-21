@@ -1,13 +1,9 @@
-/* eslint-disable arrow-body-style */
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import "./about.css";
+import React from 'react'
 
 const about = () => {
-    return (
-        <div />
-    );
-};
+  return (
+    <div>about</div>
+  )
+}
 
-export default about;
+export default about
