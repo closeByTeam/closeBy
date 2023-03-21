@@ -6,7 +6,6 @@ import '@fontsource/roboto/700.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Homepage, Slider, Navbar, About, Support } from './components';
 // import handleSubmit from './handlers/handlesubmit';
 
 const App = () => {
