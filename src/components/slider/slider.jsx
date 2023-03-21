@@ -9,7 +9,7 @@ function valuetext(value) {
   return `${value}°C`;
 }
 
-const minDistance = 1;
+const minDistance = 5;
 
 export default function Slider2() {
   
@@ -67,7 +67,7 @@ export default function Slider2() {
   return (
     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 0, paddingBottom:0, marginTop: -5}}>
     <div>
-    <Typography id="Slider2" gutterBottom>
+    <Typography sx={{display: 'flex', justifyContent: 'center'}} id="Slider2" gutterBottom>
         Distance (in miles)
       </Typography>
     <Box sx={{ width: 400, padddingTop: 0}}>
@@ -75,10 +75,14 @@ export default function Slider2() {
         getAriaLabel={() => 'Minimum distance'}
         value={value1}
         onChange={handleChange1}
-        valueLabelDisplay="auto"
         getAriaValueText={valuetext}
+        valueLabelDisplay="on"
         disableSwap
         color="secondary"
+        step={5}
+        marks
+        min={0}
+        max={100}
       />
 
     </Box>
