@@ -6,10 +6,10 @@ import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
-import { Slider, Tags,} from '..'
+import { Slider, Tags } from '..'
+import { Calendar } from '..'
 
 import logo from "../../images/white-logo.png";
-
 
 import "./homepage.css";
 
@@ -27,6 +27,7 @@ const homepage = () => {
         <div className="app">
           <h1><strong>find an event</strong></h1>
             <Slider />
+            <Calendar />
             <Tags />
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 3}}>
                 <ColorButton variant="Contained" size="large" sx={{

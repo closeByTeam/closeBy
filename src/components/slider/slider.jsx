@@ -80,18 +80,7 @@ export default function Slider2() {
         disableSwap
         color="secondary"
       />
-      <Typography id="input-slider" gutterBottom>
-        Time (in days)
-      </Typography>
-      <Slider sx={{paddingBottom: 5}}className="time-slider"
-        getAriaLabel={() => 'Minimum distance shift'}
-        value={value2}
-        onChange={handleChange2}
-        valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
-        disableSwap
-        color='secondary'
-      />
+
     </Box>
     </div>
     </Box>
