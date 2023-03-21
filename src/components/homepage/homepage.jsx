@@ -30,9 +30,7 @@ const homepage = () => {
             <Calendar />
             <Tags />
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 3}}>
-                <ColorButton variant="Contained" size="large" sx={{
-                    width: 110,
-                    }}
+                <ColorButton variant="Contained" size="large" sx={{backgroundColor: '#7704ba', width: '150px', height:'40px', fontSize: '20px'}}
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.href='/results';
