@@ -31,7 +31,7 @@ export default function Slider2() {
   return (
     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 0, paddingBottom:0, marginTop: -5}}>
       <div>
-        <Typography sx={{display: 'flex', justifyContent: 'center', fontFamily: 'Helvetica, sans-serif', fontSize: '50px', paddingBottom: '10px', color: '#c784ee'}} id="Slider2" gutterBottom>
+        <Typography sx={{display: 'flex', justifyContent: 'center', fontFamily: 'ZonaBlack, sans-serif', fontSize: '50px', paddingBottom: '10px', color: '#c784ee'}} id="Slider2" gutterBottom>
           distance in miles
         </Typography>
       <Box sx={{ width: 400, padddingTop: 0}}>
