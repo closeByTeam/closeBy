@@ -12,23 +12,6 @@ function valuetext(value) {
 const minDistance = 5;
 
 export default function Slider2() {
-  
-  const theme = createTheme({
-    palette: {
-      primary: {
-        light: '#7704ba',
-        main: '#7704ba',
-        dark: '#7704ba',
-        contrastText: '#fff',
-      },
-      secondary: {
-        light: '#7704ba',
-        main: '#7704ba',
-        dark: '#7704ba',
-        contrastText: '#000',
-      },
-    },
-  });
 
   const [value1, setValue1] = React.useState([0, 15]);
 
@@ -44,49 +27,28 @@ export default function Slider2() {
     }
   };
 
-  const [value2, setValue2] = React.useState([0, 5]);
-
-  const handleChange2 = (event, newValue, activeThumb) => {
-    if (!Array.isArray(newValue)) {
-      return;
-    }
-
-    if (newValue[1] - newValue[0] < minDistance) {
-      if (activeThumb === 0) {
-        const clamped = Math.min(newValue[0], 100 - minDistance);
-        setValue2([clamped, clamped + minDistance]);
-      } else {
-        const clamped = Math.max(newValue[1], minDistance);
-        setValue2([clamped - minDistance, clamped]);
-      }
-    } else {
-      setValue2(newValue);
-    }
-  };
 
   return (
     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 0, paddingBottom:0, marginTop: -5}}>
-    <div>
-    <Typography sx={{display: 'flex', justifyContent: 'center'}} id="Slider2" gutterBottom>
-        Distance (in miles)
-      </Typography>
-    <Box sx={{ width: 400, padddingTop: 0}}>
-      <Slider sx={{paddingBottom: 5}}className="distance-slider" 
-        getAriaLabel={() => 'Minimum distance'}
-        value={value1}
-        onChange={handleChange1}
-        getAriaValueText={valuetext}
-        valueLabelDisplay="on"
-        disableSwap
-        color="secondary"
-        step={5}
-        marks
-        min={0}
-        max={100}
-      />
-
-    </Box>
-    </div>
+      <div>
+        <Typography sx={{display: 'flex', justifyContent: 'center', fontFamily: 'Helvetica, sans-serif', fontSize: '50px', paddingBottom: '10px', color: '#c784ee'}} id="Slider2" gutterBottom>
+          distance in miles
+        </Typography>
+      <Box sx={{ width: 400, padddingTop: 0}}>
+        <Slider sx={{color: '#7704ba'}}className="distance-slider" 
+          getAriaLabel={() => 'minimum distance'}
+          value={value1}
+          onChange={handleChange1}
+          getAriaValueText={valuetext}
+          valueLabelDisplay="on"
+          disableSwap
+          step={5}
+          marks
+          min={0}
+          max={100}
+        />
+      </Box>
+      </div>
     </Box>
   );
 }
