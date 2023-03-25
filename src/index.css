@@ -28,4 +28,19 @@ body{
   height: 100px;
   padding: 0;
   margin: 0;
+  text-align: center;
  }
+
+ ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Event{
+  margin-bottom: 15mm;
+}
+
+.publisherViewEvent{
+  margin-bottom: 15mm;
+}
