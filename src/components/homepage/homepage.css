@@ -1,6 +1,6 @@
 
 h1{
-    padding-top: 80px;
+    padding-top: 40px;
     font-family: ZonaBlack;
     letter-spacing: -1px;
     font-size: 100px;
@@ -11,8 +11,6 @@ h1{
     padding-bottom: 0;
 }
 .app {
-    margin-top: -75px;
-    height: 100vh;
-    width: 100vw;
     background-image: url("../../images/home-page-bg.jpg");
+    margin-top: -70px;
 }

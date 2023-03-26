@@ -1,7 +1,9 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+
 import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
@@ -27,9 +29,14 @@ const homepage = () => {
         <div className="app">
           <h1><strong>find an event</strong></h1>
             <Slider />
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Calendar />
+            </Box>
+            <Typography sx={{display: 'flex', justifyContent: 'center', fontFamily: 'ZonaBlack, sans-serif', fontSize: '30px', paddingBottom: '2px', paddingTop: '25px', color: '#c784ee'}} id="Slider2" gutterBottom>
+              pick your interests
+            </Typography>
             <Tags />
-            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 3}}>
+            <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 4, paddingBottom: 15}}>
                 <ColorButton variant="Contained" size="large" sx={{backgroundColor: '#7704ba', width: '150px', height:'40px', fontSize: '20px'}}
                     onClick={(e) => {
                       e.preventDefault();
