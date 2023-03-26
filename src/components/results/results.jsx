@@ -1,8 +1,16 @@
 import React from 'react'
 
+import './results.css'
+
 const results = () => {
+   
   return (
-    <div>results</div>
+    <div class='results-content' id='firebaseGet'>
+      
+      <ul class='eventList' id='eventList'>
+      </ul>
+
+    </div>
   )
 }
 

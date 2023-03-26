@@ -1,0 +1,17 @@
+* {
+
+}
+
+.support-content{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+h2 {
+    font-family: ZonaBlack;
+    color: #7704ba;
+    width: auto;
+    font-size: 30px;
+    text-align: center;
+}
