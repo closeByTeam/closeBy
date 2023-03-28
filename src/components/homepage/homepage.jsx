@@ -8,7 +8,7 @@ import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
-import { Slider, Tags } from '..'
+import { Slider, Tags, Loader } from '..'
 import { Calendar } from '..'
 
 import logo from "../../images/white-logo.png";

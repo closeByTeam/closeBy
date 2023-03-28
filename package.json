@@ -30,6 +30,7 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@mui/styled-engine-sc": "^5.11.9",
+    "@uiball/loaders": "^1.2.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-calendar": "^4.1.0",
