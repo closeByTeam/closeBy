@@ -1,23 +1,23 @@
 // Import the functions you need from the SDKs you need
-import { getFirestore } from "@firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "@firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
-  measurementId: process.env.REACT_APP_measurementId
+  apiKey: "AIzaSyBJPu30vQCvUU1vWsesCAN1KB6FZGd8d50",
+  authDomain: "closeby-3949c.firebaseapp.com",
+  databaseURL: "https://closeby-3949c-default-rtdb.firebaseio.com",
+  projectId: "closeby-3949c",
+  storageBucket: "closeby-3949c.appspot.com",
+  messagingSenderId: "375301362415",
+  appId: "1:375301362415:web:6a01bef5622f157c26011a",
+  measurementId: "G-Z01MRTDR70",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const firestore = getFirestore(app);
-const analytics = getAnalytics(app);
+export const db = getFirestore(app);

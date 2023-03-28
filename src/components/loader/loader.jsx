@@ -1,17 +1,15 @@
 import React from 'react'
-import { Waveform } from '@uiball/loaders'
-
+import { LeapFrog } from '@uiball/loaders'
 import './loader.css'
 
 const loader = () => {
   return (
     <div className="loader-container">
-    <Waveform 
-        size={50}
-        lineWeight={3.5}
-        speed={1} 
-        color="white" 
-    />
+      <LeapFrog 
+      size={80}
+      speed={2.5} 
+      color="#c784ee" 
+      />
     </div>
   )
 }
