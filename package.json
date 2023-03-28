@@ -30,6 +30,7 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@mui/styled-engine-sc": "^5.11.9",
+    "firebase": "^9.18.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-calendar": "^4.1.0",
