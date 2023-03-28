@@ -2,6 +2,7 @@ import React from 'react';
 
 const Event = () => {
     //actual data should be retrieved from database
+    //created by should be retrieved from publisher account
     return (
         <body className='Event'>
             <div id="name">name</div>

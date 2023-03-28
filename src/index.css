@@ -29,12 +29,17 @@ body{
   padding: 0;
   margin: 0;
   text-align: center;
- }
+}
 
- ul{
+ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+label{
+  text-align: center;
+  vertical-align: center;
 }
 
 .Event{
