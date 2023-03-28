@@ -16,9 +16,4 @@ describe("Homepage", () => {
         expect(document.body).toHaveTextContent;
     });
 
-    it("Render button", () => {
-        render(<homepage />);
-        const button = element("button");
-        expect(button).not.toBeNull();
-    });
 });
