@@ -7,10 +7,10 @@ const loader = () => {
   return (
     <div className="loader-container">
     <Waveform 
-        size={40}
+        size={50}
         lineWeight={3.5}
         speed={1} 
-        color="grey" 
+        color="white" 
     />
     </div>
   )
