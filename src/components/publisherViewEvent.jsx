@@ -8,8 +8,8 @@ const PublisherViewEvent = () => {
 
     //eventArray will be the events in the database that are visible to the publisher
     const eventArray = [<Event />, <Event />, <Event />]
-    const [state, setState] = useState('noModifyForm');
     //modify event will bring up the form to add an event only it will be prefilled with the data from the event selected for modification
+    //modify event will pass the data to the form in publisher home and set the state to display the form
     //delete event will make the event no longer visible to the publisher
     const listEvents = eventArray.map((events) =>
         <body className='Event'>
@@ -21,12 +21,7 @@ const PublisherViewEvent = () => {
 
     return (
         <body className='publisherViewEvent'>
-            {state === 'noModifyForm' && (
             <div>{listEvents}</div>
-            )}
-            {state === 'modifyFormAvailable' && (
-                <EventForm />
-            )}
         </body>
       );
 }

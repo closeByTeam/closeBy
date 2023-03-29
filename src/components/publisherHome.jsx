@@ -7,19 +7,20 @@ const PublisherHome = () => {
   //Idea: read all events into array and put them all into publisherHome component
   //Clicking the Add Event Button should replace the button with a form for creating a new event
 
-  const [state, setState] = useState('noAddForm');
+  const [state, setState] = useState('noForm');
+  //const [state, setState] = useState('formAvailable'); //Delete after, only for testing
     return (
-      
-
       <body>
-        {state === 'noAddForm' && (
-        <button type='button'>Add Event</button> 
+        {state === 'noForm' && (
+          <body>
+            <button type='button' onClick={() => setState("formAvailable")}>Add Event</button> 
+            <div>Your Events:</div>
+            <PublisherViewEvent />
+          </body>          
         )}
-        {state === 'addFormAvailable' && (
-        <EventForm /> 
-        )}
-        <div>Your Events:</div>
-        <PublisherViewEvent />
+        {state === 'formAvailable' && (
+          <EventForm /> 
+        )}        
       </body>
       
     );
