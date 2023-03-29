@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding: 0 1rem;
+    padding: 1rem;
+    background-color: #7704ba;
 }
 
 .item-container ul {
