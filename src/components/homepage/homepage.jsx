@@ -54,7 +54,7 @@ const Homepage = () => {
                       }}
                     >go!</ColorButton>
             </Box>
-            <Button variant="outlined" onClick={handleLocation}>
+            <Button sx={{backgroundColor: '#7704ba'}} variant="outlined" onClick={handleLocation}>
               Get My Location
             </Button>
       </div>
