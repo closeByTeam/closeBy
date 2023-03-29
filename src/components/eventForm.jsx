@@ -1,8 +1,7 @@
 import React from 'react';
 
-const EventForm = () => {
+const EventForm = ({setState}) => {
     
-
     return(
         <form>
         <label for="eventName">Event name:</label>
@@ -21,7 +20,7 @@ const EventForm = () => {
         <textarea rows="5" columns="300" id="eventDescription" name="eventDescription"></textarea>
         <br />
         <button type="submit" value="Submit">Submit</button>
-        <button type="button" value="Cancel">Cancel</button>
+        <button type="button" value="Cancel" onClick={() => setState("noForm")}>Cancel</button>
         </form>
     );
 };
