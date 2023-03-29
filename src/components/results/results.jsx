@@ -2,10 +2,10 @@ import { db } from "../../firebase";
 import { getDocs, collection } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
+import "./results.css";
 
 function results() {
   const collectionName = "Publisher App/PublisherAccountList/EventListAllPublishers";
-  const timeVar = "Date+Time";
 
   const [events, setEvents] = useState([]);
 
@@ -36,11 +36,11 @@ function results() {
               <p>{item.Description}</p>
               <p>{item.Location}</p>
               {item.Publisher && item.Publisher.Account && (
-      <p>{item.Publisher.Account}</p>
+              <p>{item.Publisher.Account}</p>
     )}
             <ul>
             {item.Category && item.Category.map((category, index) => (
-  <p key={index}>{category}</p>
+            <p key={index}>{category}</p>
 ))}
     </ul>
             </div>
