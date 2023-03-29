@@ -1,18 +1,11 @@
-/* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
 import { purple } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
-
 import { Slider, Tags, Loader } from '..'
 import { Calendar } from '..'
-
-import logo from "../../images/white-logo.png";
-
 import "./homepage.css";
 
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -23,8 +16,25 @@ const ColorButton = styled(Button)(({ theme }) => ({
     },
   }));
 
+const Homepage = () => {
+    const [location, setLocation] = useState(null);
 
-const homepage = () => {
+    const handleLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            setLocation({ latitude, longitude });
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+      } else {
+        console.error('Geolocation is not supported by this browser.');
+      }
+    };
+
     return (
         <div className="app">
           <h1><strong>find an event</strong></h1>
@@ -37,16 +47,18 @@ const homepage = () => {
             </Typography>
             <Tags />
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 4, paddingBottom: 15}}>
-                <ColorButton variant="Contained" size="large" sx={{backgroundColor: '#7704ba', width: '150px', height:'40px', fontSize: '20px'}}
+                <ColorButton variant="contained" size="large" sx={{backgroundColor: '#7704ba', width: '150px', height:'40px', fontSize: '20px'}}
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href='/results';
+                      window.location.href=`/results${location ? `?latitude=${location.latitude}&longitude=${location.longitude}` : ''}`;
                       }}
                     >go!</ColorButton>
             </Box>
+            <Button variant="outlined" onClick={handleLocation}>
+              Get My Location
+            </Button>
       </div>
     );
-
 };
 
-export default homepage;
+export default Homepage;
