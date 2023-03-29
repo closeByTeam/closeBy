@@ -15,10 +15,11 @@ function results() {
 
   const fetchEvents = async () => {
     const querySnapshot = await getDocs(collection(db, collectionName));
+    const eventsArray = [];
     querySnapshot.forEach((doc) => {
-      setEvents((prevEvents) => [...prevEvents, doc.data()]);
+      eventsArray.push(doc.data());
     });
-    console.log(events);
+    setEvents(eventsArray);
   };
 
   return (
@@ -31,9 +32,17 @@ function results() {
           return (
             <div className="item-container" key={item.id}>
               <h4>{item.EventName}</h4>
+              {dateTimeString && <p>{dateTimeString}</p>}
               <p>{item.Description}</p>
               <p>{item.Location}</p>
-              {dateTimeString && <p>{dateTimeString}</p>}
+              {item.Publisher && item.Publisher.Account && (
+      <p>{item.Publisher.Account}</p>
+    )}
+            <ul>
+            {item.Category && item.Category.map((category, index) => (
+  <p key={index}>{category}</p>
+))}
+    </ul>
             </div>
           );
         })}
