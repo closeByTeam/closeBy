@@ -1,15 +1,30 @@
 
-.item-container {
+.eventList {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    padding: 1rem;
+    align-items: center;
+  }
+  
+  .item-container {
+    margin-top: 30px;
+    width: 60%;
+    color: white;
+    padding: 1rem 1rem 3rem 1rem;
     background-color: #7704ba;
-}
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
-.item-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  .item-container h4{
+    margin-top: 10px;
+    font-size: 100px;
+    margin-bottom: 10px;
+    font-family: ZonaBlack, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .item-container p{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-family: Helvetica, sans-serif;
+  }

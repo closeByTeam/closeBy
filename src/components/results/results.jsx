@@ -19,6 +19,13 @@ function results() {
     querySnapshot.forEach((doc) => {
       eventsArray.push(doc.data());
     });
+  
+    eventsArray.sort((a, b) => {
+      const aTime = a.Time ? a.Time.toDate() : null;
+      const bTime = b.Time ? b.Time.toDate() : null;
+      return aTime - bTime;
+    });
+  
     setEvents(eventsArray);
   };
 
@@ -33,16 +40,7 @@ function results() {
             <div className="item-container" key={item.id}>
               <h4>{item.EventName}</h4>
               {dateTimeString && <p>{dateTimeString}</p>}
-              <p>{item.Description}</p>
               <p>{item.Location}</p>
-              {item.Publisher && item.Publisher.Account && (
-              <p>{item.Publisher.Account}</p>
-    )}
-            <ul>
-            {item.Category && item.Category.map((category, index) => (
-            <p key={index}>{category}</p>
-))}
-    </ul>
             </div>
           );
         })}
