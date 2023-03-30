@@ -6,18 +6,11 @@ import '@fontsource/roboto/700.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// import handleSubmit from './handlers/handlesubmit';
-
 
 
 const App = () => {
-  // const submithandler = (e) => {
-  //   e.preventDefault()
-  //   handleSubmit(dataRef.current.value)
-  //   dataRef.current.value = ""
-  // }
   return (
-    <div>test2</div>
+    <div></div>
   );
 };
 
