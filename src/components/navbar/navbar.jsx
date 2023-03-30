@@ -11,7 +11,7 @@ const navbar = () => {
 
     return (
         <nav className="navbar">
-        <a href="/"><img src={logo} className="app-logo" alt="logo" /></a>
+        <a href="/"><img src={logo} className="app-logo" alt="logo" width={140} height={140}/></a>
           <ul>
             <li><a className="nav-button" href="/support">support</a></li>
             <li><a className="nav-button" href="/about">about us</a></li>

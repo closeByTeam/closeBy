@@ -1,7 +1,5 @@
-import { CenterFocusStrong, CenterFocusWeakTwoTone } from '@mui/icons-material';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import { createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
