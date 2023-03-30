@@ -4,12 +4,12 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value} miles`;
 }
 
 const minDistance = 5;
 
-export default function Slider2() {
+export default function Slider2({onChange}) {
 
   const [value1, setValue1] = React.useState([0, 15]);
 
@@ -23,6 +23,7 @@ export default function Slider2() {
     } else {
       setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)]);
     }
+
   };
 
 
