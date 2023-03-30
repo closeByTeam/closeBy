@@ -9,11 +9,11 @@ const PublisherViewEvent = ({handleModify}) => {
     //modify event will bring up the form to add an event only it will be prefilled with the data from the event selected for modification
     //modify event will pass the data to the form in publisher home and set the state to display the form
     const listEvents = eventArray.map((events) =>
-        <body className='Event'>
+        <div>
             <div>{events}</div>
             <button type='button' onClick = {() => handleModify()}>Modify Event</button>
             <button type='button' onClick = {() => handleDelete()}>Delete Event</button>  
-        </body>
+        </div>
     );
 
     const handleDelete = () => {
@@ -21,7 +21,7 @@ const PublisherViewEvent = ({handleModify}) => {
     }
 
     return (
-        <body className='publisherViewEvent'>
+        <body>
             <div>{listEvents}</div>
         </body>
       );
