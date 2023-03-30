@@ -1,5 +1,3 @@
-closeby purple: #7704ba
-
-closeby lavender: #d4b4e6
-
-white: #ffffff
+Primary colors: 
+    dark purple: #7704ba
+    light purple: #c784ee

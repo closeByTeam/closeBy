@@ -1,0 +1,16 @@
+
+h1{
+    padding-top: 40px;
+    font-family: ZonaBlack;
+    letter-spacing: -1px;
+    font-size: 100px;
+    color: #7704ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.app {
+    background-image: url("../../images/home-page-bg.jpg");
+    margin-top: -70px;
+}

@@ -1,4 +1,5 @@
-# closeby
+# Close By
+event manager for dioces and other organizations with a user page to view and find events to attend
 
-To browse the site as of now you have to use visual studio code live server to run a local instance of the page in your browser. 
-here are instructions to use the live server: https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code/
+## To run the developer code run the following command
+```npm run dev```

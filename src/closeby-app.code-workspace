@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "closeby-app",
+			"path": ".."
+		},
+		{
+			"name": "Zona-Pro",
+			"path": "../../closeby/font/Zona-Pro"
+		}
+	],
+	"settings": {}
+}
