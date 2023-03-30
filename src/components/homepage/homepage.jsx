@@ -16,6 +16,15 @@ const ColorButton = styled(Button)(({ theme }) => ({
     },
   }));
 
+  const LocationButton = styled(Button)(({ theme }) => ({
+    color: 'white',
+    backgroundColor: 'grey',
+    '&:hover': {
+      backgroundColor: purple[700],
+      color: 'white'
+    },
+  }));  
+
 const Homepage = () => {
     const [location, setLocation] = useState(null);
 
@@ -54,9 +63,9 @@ const Homepage = () => {
                       }}
                     >go!</ColorButton>
             </Box>
-            <Button sx={{backgroundColor: '#7704ba'}} variant="outlined" onClick={handleLocation}>
+            <LocationButton sx={{backgroundColor: 'grey', color: 'white', borderColor: 'white'}} variant="outlined" onClick={handleLocation}>
               Get My Location
-            </Button>
+            </LocationButton>
       </div>
     );
 };
