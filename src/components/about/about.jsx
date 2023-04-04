@@ -1,7 +1,7 @@
-import React from 'react'
-import "./about.css"
-const about = () => {
-  return (
+import React from "react";
+import "./about.css";
+
+export const about = () => (
     <div className='aboutPage'>
       <h1>about our diocese</h1>
       <div className='info'>
@@ -20,7 +20,6 @@ const about = () => {
         <p></p>
       </div>
     </div>
-  )
-}
+  );
 
-export default about
+
