@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
+const Login = ({onSave}) => {
+
 const [errorMessages, setErrorMessages] = useState({});
 const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -19,6 +21,8 @@ const errors = {
     uname: "invalid username",
     pass: "invalid password"
 };
+
+
 
 const renderErrorMessage = (name) =>
   name === errorMessages.name && (
@@ -72,7 +76,10 @@ return (
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? onSave() : renderForm}
       </div>
     </div>
   );
+}
+
+  export default Login;
