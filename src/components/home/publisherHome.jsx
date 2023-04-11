@@ -1,7 +1,6 @@
-import React from 'react';
 import PublisherViewEvent from './publisherViewEvent';
 import { useState } from 'react'
-import EventForm from './eventForm';
+import EventForm from '../eventHandler/eventForm';
 
 const PublisherHome = () => {
   //Idea: read all events into array and put them all into publisherHome component

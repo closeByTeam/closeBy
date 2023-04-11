@@ -1,5 +1,5 @@
 import React from 'react';
-import Event from './event';
+import EventForm from '../eventHandler/eventForm';
 
 
 const PublisherViewEvent = ({handleModify}) => {
