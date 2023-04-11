@@ -12,6 +12,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import * as React from 'react';
 
+import './tags.css';
+
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -73,9 +75,15 @@ export default function Tags() {
               onChange={handleChange}
               input={<OutlinedInput 
                 sx={{ color: '#6B3FB1', outlineColor: '#6B3FB1', borderColor: '#6B3FB1',
-                '&:hover': {color: '#6B3FB1'},
-                '&focused': {color: '#6B3FB1'},
-                '&notchedOutline': {borderColor: '#6B3FB1'}
+                '.MuiOutlinedInput-notchedOutline': {
+                  borderColor: '#683FB1',
+                },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                  borderColor: '#683FB1',
+                },
+                '&:hover .MuiOutlinedInput-notchedOutline': {
+                  borderColor: '#683FB1',
+                },
               }}
                 label="Event Types" />}
               renderValue={(selected) => selected.join(', ')}

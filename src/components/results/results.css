@@ -1,30 +1,92 @@
-
 .eventList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .item-container {
-    margin-top: 30px;
-    width: 60%;
-    color: white;
-    padding: 1rem 1rem 3rem 1rem;
-    background-color: #7704ba;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .item-container h4{
-    margin-top: 10px;
-    font-size: 100px;
-    margin-bottom: 10px;
-    font-family: ZonaBlack, sans-serif;
-    text-transform: uppercase;
-  }
+.item-container {
+  margin-top: 30px;
+  width: 120%;
+  transform: translateX(-75%);
+  color: white;
+  padding: 1rem 1rem 3rem 1rem;
+  background-color: #7704ba;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
 
-  .item-container p{
-    margin-top: 0px;
-    margin-bottom: 2px;
-    font-family: Helvetica, sans-serif;
-  }
+.item-container:hover {
+  background-color: #c784ee;
+}
+
+.item-container h4 {
+  margin-top: 10px;
+  font-size: 80px;
+  margin-bottom: 10px;
+  font-family: ZonaBlack, sans-serif;
+  text-transform: uppercase;
+}
+
+.item-container p {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  font-family: Helvetica, sans-serif;
+}
+
+.item-container .text-container {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 82px;
+}
+
+.item-container .text-container p:first-child {
+  margin-left: 0;
+}
+
+.is-expanded {
+  width: 120%;
+  transform: translateX(-75%);
+  background-color: #c784ee;
+}
+
+.selected-event{
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100%;
+  width: 50%;
+  background-color: #c784ee;
+}
+
+.selected-event h4{
+  color: white;
+  margin-top: 10px;
+  font-size: 80px;
+  margin-bottom: 0px;
+  font-family: ZonaBlack, sans-serif;
+  text-transform: uppercase;
+}
+
+.selected-event h5{
+  color: #7704ba;
+  font-size: 40px;
+  font-family: ZonaBlack, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+.selected-event p{
+  color: white;
+  font-size: 20px;
+  font-family: ZonaBlack, sans-serif;
+}
+
+.tags p{
+  color: white;
+  font-size: 20px;
+  font-family: ZonaBlack, sans-serif;
+  background-color: #7704ba;
+  width: 15%;
+  height: 50px;
+}
