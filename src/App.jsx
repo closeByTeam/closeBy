@@ -1,17 +1,51 @@
-/* eslint-disable arrow-body-style */
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { About, Navbar, Homepage, Support, Results, Loader } from './components';
 
 
+function App () {
 
-const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+  let component 
+  switch (window.location.pathname) {
+    case "/":
+      component = <Homepage /> 
+      break 
+    case "/about":
+      component = <About />
+      break
+    case "/support":
+      component = <Support />
+      break
+    case "/results":
+      component = <Results />
+      break
+  }
+
   return (
-    <div></div>
+    <>
+    {
+      loading ? (
+        <>
+        <Loader />
+        </>
+      ) : (
+      <>
+      <Navbar />
+      {component}
+    </>
+  )}
+  </>
   );
-};
+}
 
 export default App;
