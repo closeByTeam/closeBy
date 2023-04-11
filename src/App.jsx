@@ -5,8 +5,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import React, { useState , useCallback} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PublisherHome from './components/publisherHome';
-import Login from './components/Login';
+import PublisherHome from './components/home/publisherHome';
+import Login from './components/login/Login';
 
 
 
