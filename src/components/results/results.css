@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.item-container:hover {
+.item-container:active {
   background-color: #c784ee;
 }
 
@@ -54,9 +54,12 @@
 .selected-event{
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 83px;
   height: 100%;
-  width: 50%;
+  width: 45%;
   background-color: #c784ee;
+  margin-left: 720px;
+  margin-top: -785px;
 }
 
 .selected-event h4{
@@ -89,4 +92,20 @@
   background-color: #7704ba;
   width: 15%;
   height: 50px;
+}
+
+.link a{
+  text-decoration: none;
+  color: #7704ba;
+}
+
+.rsvp a{
+  background-color: white;
+  color: #c784ee;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px 60px;
+  font-family: ZonaBlack, sans-serif;
+  font-size: 30px;
+  margin-left: 480px;
 }
