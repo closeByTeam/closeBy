@@ -9,6 +9,32 @@ import PublisherHome from './components/home/publisherHome';
 import Login from './components/login/Login';
 
 
+function App () {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+  let component 
+  switch (window.location.pathname) {
+    case "/":
+      component = <Homepage /> 
+      break 
+    case "/about":
+      component = <About />
+      break
+    case "/support":
+      component = <Support />
+      break
+    case "/results":
+      component = <Results />
+      break
+  }
 
 export const App = () => {
   const [view, setView] = useState("Login");
@@ -38,5 +64,21 @@ export const App = () => {
       );
   }
 };
+  return (
+    <>
+    {
+      loading ? (
+        <>
+        <Loader />
+        </>
+      ) : (
+      <>
+      <Navbar />
+      {component}
+    </>
+  )}
+  </>
+  );
+}
 
 export default App;
