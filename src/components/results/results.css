@@ -1,15 +1,17 @@
 .eventList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.item-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .item-container {
-  margin-top: 30px;
-  width: 120%;
-  transform: translateX(-75%);
   color: white;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1rem;
   background-color: #7704ba;
   margin-bottom: 1rem;
   text-align: center;
@@ -22,8 +24,7 @@
 }
 
 .item-container h4 {
-  margin-top: 10px;
-  font-size: 80px;
+  font-size: 24px;
   margin-bottom: 10px;
   font-family: ZonaBlack, sans-serif;
   text-transform: uppercase;
@@ -35,77 +36,79 @@
   font-family: Helvetica, sans-serif;
 }
 
-.item-container .text-container {
-  display: flex;
-  align-items: flex-start;
-  margin-left: 82px;
-}
-
-.item-container .text-container p:first-child {
-  margin-left: 0;
-}
-
 .is-expanded {
-  width: 120%;
-  transform: translateX(-75%);
   background-color: #c784ee;
 }
 
-.selected-event{
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 83px;
-  height: 100%;
-  width: 45%;
+.selected-event {
+  padding: 1rem;
   background-color: #c784ee;
-  margin-left: 720px;
-  margin-top: -785px;
 }
 
-.selected-event h4{
+.selected-event h4 {
   color: white;
-  margin-top: 10px;
-  font-size: 80px;
+  font-size: 36px;
   margin-bottom: 0px;
   font-family: ZonaBlack, sans-serif;
   text-transform: uppercase;
 }
 
-.selected-event h5{
+.selected-event h5 {
   color: #7704ba;
-  font-size: 40px;
-  font-family: ZonaBlack, sans-serif;
-  padding: 0px;
-  margin: 0px;
-}
-
-.selected-event p{
-  color: white;
   font-size: 20px;
   font-family: ZonaBlack, sans-serif;
 }
 
-.tags p{
-  color: white;
-  font-size: 20px;
-  font-family: ZonaBlack, sans-serif;
+.tags p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tags p:not(:last-child):after {
+  content: ",";
+  margin-right: 5px;
+}
+
+.tags p:last-child:after {
+  content: "";
+}
+
+.link {
+  margin-top: 10px;
+}
+
+.link p {
+  margin: 0;
+}
+
+.link a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.link a:hover {
+  color: #7704ba;
+}
+
+.rsvp {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.rsvp a {
   background-color: #7704ba;
-  width: 15%;
-  height: 50px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
 }
 
-.link a{
-  text-decoration: none;
+.rsvp a:hover {
+  background-color: #fff;
   color: #7704ba;
-}
-
-.rsvp a{
-  background-color: white;
-  color: #c784ee;
-  text-decoration: none;
-  border-radius: 12px;
-  padding: 10px 60px;
-  font-family: ZonaBlack, sans-serif;
-  font-size: 30px;
-  margin-left: 480px;
 }

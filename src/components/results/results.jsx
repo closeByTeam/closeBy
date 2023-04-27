@@ -50,49 +50,50 @@ function Results() {
 
   const selectedEventObj = events.find((event) => event.id === selectedEvent);
 
-  return (
-    <div className="eventList">
-      <div className="item-list">
-        {events &&
-          events.map((item) => {
-            const time = item.Time ? item.Time.toDate() : null;
-            const dateTimeString = time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString()}` : null;
-
             return (
-              <div
-                className={`item-container ${item.isExpanded ? "is-expanded" : ""} ${selectedEvent === item.id ? "is-selected" : ""}`}
-                key={item.id}
-                onClick={() => handleItemClick(item.id)}
-              >
-                <h4>{item.EventName}</h4>
-                {dateTimeString && <p>{dateTimeString}</p>}
-                <p>{item.Location}</p>
+              <div className="eventList">
+              <div className="item-list">
+                {events &&
+                  events.map((item) => {
+                    const time = item.Time ? item.Time.toDate() : null;
+                    const dateTimeString = time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString()}` : null;
+            
+                    return (
+                      <div
+                        className={`item-container ${item.isExpanded ? "is-expanded" : ""} ${selectedEvent === item.id ? "is-selected" : ""}`}
+                        key={item.id}
+                        onClick={() => handleItemClick(item.id)}
+                      >
+                        <h4>{item.EventName}</h4>
+                        {dateTimeString && <p>{dateTimeString}</p>}
+                        <p>{item.Location}</p>
+                      </div>
+                    );
+                  })}
               </div>
-            );
-          })}
-      </div>
-      {selectedEventObj && (
-        <div className="selected-event">
-          <h4>{selectedEventObj.EventName}</h4>
-          <h5>{selectedEventObj.Location}</h5>
-          <h5>{selectedEventDateTimeString}</h5>
-          <p>{selectedEventObj.Description}</p>
-          <h5>Tags:</h5>
-          <div className="tags">
-          <p>{selectedEventObj.Category}</p>
-          </div>
-          <p>{selectedEventObj.Publisher.Account} </p>
-          <div className="link">
-            <p>
-              <a href="" target="_blank">Learn More</a>
-            </p>
-          </div>
-          <div className="rsvp">
-            <a href="" target="_blank">RSVP</a>
-          </div>
-        </div>
-      )}
-    </div>
+              {selectedEventObj && (
+                <div className="selected-event">
+                  <h4>{selectedEventObj.EventName}</h4>
+                  <h5>{selectedEventObj.Location}</h5>
+                  <h5>{selectedEventDateTimeString}</h5>
+                  <p>{selectedEventObj.Description}</p>
+                  <h5>Tags:</h5>
+                  <div className="tags">
+                  <p>{selectedEventObj.Category}</p>
+                  </div>
+                  <p>{selectedEventObj.Publisher.Account} </p>
+                  <div className="link">
+                    <p>
+                      <a href="" target="_blank">Learn More</a>
+                    </p>
+                  </div>
+                  <div className="rsvp">
+                    <a href="" target="_blank">RSVP</a>
+                  </div>
+                </div>
+              )}
+            </div>
+            
   );
 }
 
