@@ -37,16 +37,24 @@ function Results() {
         if (event.id === itemId) {
           return { ...event, isExpanded: !event.isExpanded };
         }
-        return event;
+        return { ...event, isExpanded: false };
       });
       return updatedEvents;
     });
-    setSelectedEvent(itemId);
-
+  
+    setSelectedEvent((prevSelectedEvent) => {
+      if (prevSelectedEvent === itemId) {
+        return null;
+      } else {
+        return itemId;
+      }
+    });
+  
     const selectedEventObj = events.find((event) => event.id === itemId);
     const time = selectedEventObj.Time ? selectedEventObj.Time.toDate() : null;
     setSelectedEventDateTimeString(time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString()}` : null);
   };
+  
 
   const selectedEventObj = events.find((event) => event.id === selectedEvent);
 

@@ -26,11 +26,13 @@ const MenuProps = {
 };
 
 const names = [
-  'Food',
-  'Music',
-  'Art',
-  'Charity',
-  'Sports',
+  'Sale',
+  'Meal',
+  'Festival',
+  'Concert',
+  'Road Trip',
+  'Speaker',
+  'Service'
 ];
 
 const theme = createTheme({

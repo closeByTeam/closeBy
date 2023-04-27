@@ -11,7 +11,7 @@ const calendar = () => {
       return (
         <div className='cal-app'>
           <Typography sx={{display: 'flex', justifyContent: 'center', fontFamily: 'ZonaBlack, sans-serif', fontSize: '30px', paddingBottom: '2px', color: '#c784ee'}} id="Slider2" gutterBottom>
-          select your times
+          select your date range
         </Typography>
             <Calendar
               onChange={setDate}
