@@ -5,7 +5,7 @@ import EventForm from '../eventHandler/eventForm';
 const PublisherViewEvent = ({handleModify}) => {
 
     //eventArray will be the events in the database that are visible to the publisher
-    const eventArray = [<Event />, <Event />, <Event />]
+    const eventArray = [<EventForm />, <EventForm />, <EventForm />]
     //modify event will bring up the form to add an event only it will be prefilled with the data from the event selected for modification
     //modify event will pass the data to the form in publisher home and set the state to display the form
     const listEvents = eventArray.map((events) =>

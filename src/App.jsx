@@ -9,6 +9,8 @@ import PublisherHome from './components/home/publisherHome';
 import Login from './components/login/Login';
 import Loader from './components/loader/loader.jsx';
 import Navbar from './components/navbar/navbar.jsx';
+import Support from './components/support/support.jsx';
+import About from './components/about/about.jsx';
 
 
 function App () {
@@ -21,11 +23,15 @@ function App () {
     }, 2000);
   }, []);
 
+  const transitionToPublisherHome = useCallback(
+    () => window.location.pathname = '/PublisherHome',
+    []
+  );
 
   let component 
   switch (window.location.pathname) {
     case "/":
-      component = <Login /> 
+      component = <Login onSave={transitionToPublisherHome}/> 
       break 
     case "/about":
       component = <About />
@@ -35,6 +41,9 @@ function App () {
       break
     case "/results":
       component = <Results />
+      break
+    case "/PublisherHome":
+      component = <PublisherHome />
       break
   }
 
