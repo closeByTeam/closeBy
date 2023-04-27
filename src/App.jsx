@@ -3,10 +3,12 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import React, { useState , useCallback} from 'react';
+import React, { useState , useCallback, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PublisherHome from './components/home/publisherHome';
 import Login from './components/login/Login';
+import Loader from './components/loader/loader.jsx';
+import Navbar from './components/navbar/navbar.jsx';
 
 
 function App () {
@@ -23,7 +25,7 @@ function App () {
   let component 
   switch (window.location.pathname) {
     case "/":
-      component = <Homepage /> 
+      component = <Login /> 
       break 
     case "/about":
       component = <About />
@@ -36,34 +38,6 @@ function App () {
       break
   }
 
-export const App = () => {
-  const [view, setView] = useState("Login");
-  
-  const transitionToLogin = useCallback(
-    () => setView("Login"),
-    []
-  );
-
-  const transitionToPublisherHome = useCallback(
-    () => setView("PublisherHome"),
-    []
-  );
-
-  switch (view) {
-    case "Login":
-      return (
-        <Login onSave={transitionToPublisherHome}/>
-      );
-    case "PublisherHome":
-      return (
-        <PublisherHome />
-      );
-    default:
-      return (
-        <Login />
-      );
-  }
-};
   return (
     <>
     {
