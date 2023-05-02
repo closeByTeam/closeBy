@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import './login.css';
 
 const Login = ({onSave}) => {
 
@@ -56,17 +57,17 @@ const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>Username </label>
-          <input type="text" name="uname" required />
+          <label className="basic-text">Username </label>
+          <input className="text-input" type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
         <div className="input-container">
-          <label>Password </label>
-          <input type="password" name="pass" required />
+          <label className="basic-text">Password </label>
+          <input className="text-input" type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <input className="button" type="submit" />
         </div>
       </form>
     </div>

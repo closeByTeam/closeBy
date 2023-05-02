@@ -1,0 +1,44 @@
+.title {
+    font-family: ZonaBlack;
+    color: #7704ba;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.basic-text {
+    font-family: ZonaBlack;
+    color: #7704ba;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.text-input {
+    font-family: ZonaBlack;
+    background-color: white;
+    color: #7704ba;
+    font-size: 20px;
+}
+
+.button {
+    font-family: ZonaBlack;
+    background-color: #7704ba;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.input-container {
+    position: relative;
+    margin: 15px;
+}
+
+.error {
+    font-family: ZonaBlack;
+    color: red;
+}
