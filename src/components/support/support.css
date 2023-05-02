@@ -2,6 +2,22 @@
 
 }
 
+.support-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    background-color: #C784EE;
+    width: 100%;
+  }
+  
+label, input {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
 .support-content{
     display: flex;
     justify-content: center;
@@ -9,9 +25,22 @@
 }
 
 h2 {
-    font-family: ZonaBlack;
+    font-family: ZonaBlack, sans-serif;
     color: #7704ba;
     width: auto;
     font-size: 30px;
     text-align: center;
+}
+
+label {
+    font-family: zonaBlack, sans-serif;
+    color: #7704ba;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+input {
+    color: #C784EE;
+    font-size: 20px;
 }
