@@ -1,6 +1,7 @@
 import PublisherViewEvent from './publisherViewEvent';
 import { useState } from 'react'
 import EventForm from '../eventHandler/eventForm';
+import './publisher.css';
 
 const PublisherHome = () => {
   //Idea: read all events into array and put them all into publisherHome component
@@ -17,8 +18,8 @@ const PublisherHome = () => {
       <body>
         {state === 'noForm' && (
           <body>
-            <button type='button' onClick={() => setState("formAvailable")}>Add Event</button> 
-            <div>Your Events:</div>
+            <button className="button" type='button' onClick={() => setState("formAvailable")}>Add Event</button> 
+            <div className="text">Your Events:</div>
             <PublisherViewEvent handleModify={handleModify}/>
           </body>          
         )}

@@ -1,0 +1,18 @@
+.text {
+    font-family: ZonaBlack;
+    color: #7704ba;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.button {
+    font-family: ZonaBlack;
+    background-color: #7704ba;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}

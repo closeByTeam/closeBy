@@ -1,6 +1,6 @@
 import React from 'react';
 import EventForm from '../eventHandler/eventForm';
-
+import './publisher.css';
 
 const PublisherViewEvent = ({handleModify}) => {
 
@@ -11,8 +11,8 @@ const PublisherViewEvent = ({handleModify}) => {
     const listEvents = eventArray.map((events) =>
         <div>
             <div>{events}</div>
-            <button type='button' onClick = {() => handleModify()}>Modify Event</button>
-            <button type='button' onClick = {() => handleDelete()}>Delete Event</button>  
+            <button className="button" type='button' onClick = {() => handleModify()}>Modify Event</button>
+            <button className="button" type='button' onClick = {() => handleDelete()}>Delete Event</button>  
         </div>
     );
 

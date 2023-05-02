@@ -1,0 +1,25 @@
+.event-form{
+    font-family: ZonaBlack;
+    color: #7704ba;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
+
+.input {
+    font-family: ZonaBlack;
+    background-color: white;
+    color: #7704ba;
+    font-size: 20px;
+}
+
+.button {
+    font-family: ZonaBlack;
+    background-color: #7704ba;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    position: relative;
+    margin: 15px;
+}
