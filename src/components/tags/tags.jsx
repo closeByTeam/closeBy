@@ -26,11 +26,11 @@ const MenuProps = {
 };
 
 const names = [
-  'Sale',
-  'Meal',
+  'Buy/Sell',
+  'Food',
   'Festival',
   'Concert',
-  'Road Trip',
+  'Travel',
   'Speaker',
   'Service'
 ];
