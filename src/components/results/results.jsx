@@ -3,7 +3,8 @@ import { getDocs, collection, where, query } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
 import "./results.css";
-import Tags from "../tags/tags";
+
+import { selected } from "../tags/tags";
 
 function Results() {
   const collectionName = "/Events";
@@ -17,7 +18,9 @@ function Results() {
   }, []);
 
   const fetchEvents = async () => {
-    
+    // selected.forEach(element => {
+    //   console.log(element)
+    // });
     const querySnapshot = await getDocs(collection(db, collectionName), where("Buy and Sell", "in", "Categories"));
     const eventsArray = [];
     querySnapshot.forEach((doc) => {

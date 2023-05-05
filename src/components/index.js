@@ -7,4 +7,3 @@ export { default as Results } from './results/results';
 export { default as Support } from './support/support';
 export { default as Calendar } from './calendar/calendar';
 export { default as Loader } from './loader/loader';
-export { selected as Selected } from './tags/tags'

@@ -26,7 +26,7 @@ const MenuProps = {
 };
 
 const names = [
-  "Buy/Sell",
+  "Buy and Sell",
   "Food",
   "Festival",
   "Concert",

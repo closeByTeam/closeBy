@@ -28,7 +28,7 @@
 
 
 body{
-  background-image: url(./assets/images/home-page-bg.jpg);
+  background-image: url('../src/images/home-page-bg.jpg');
   padding: 0;
   margin: 0;
  }
