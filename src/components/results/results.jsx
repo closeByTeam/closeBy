@@ -17,9 +17,7 @@ function Results() {
   }, []);
 
   const fetchEvents = async () => {
-    if (Selected == ['Buy and Sell']) {
-      console.log('we did it bois');
-    }
+    
     const querySnapshot = await getDocs(collection(db, collectionName), where("Buy and Sell", "in", "Categories"));
     const eventsArray = [];
     querySnapshot.forEach((doc) => {
