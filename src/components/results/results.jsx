@@ -1,11 +1,12 @@
 import { db } from "../../firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, where, query } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
 import "./results.css";
+import Tags from "../tags/tags";
 
 function Results() {
-  const collectionName = "Publisher App/PublisherAccountList/EventListAllPublishers";
+  const collectionName = "/Events";
 
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -16,7 +17,10 @@ function Results() {
   }, []);
 
   const fetchEvents = async () => {
-    const querySnapshot = await getDocs(collection(db, collectionName));
+    if (Selected == ['Buy and Sell']) {
+      console.log('we did it bois');
+    }
+    const querySnapshot = await getDocs(collection(db, collectionName), where("Buy and Sell", "in", "Categories"));
     const eventsArray = [];
     querySnapshot.forEach((doc) => {
       eventsArray.push({ ...doc.data(), id: doc.id });
@@ -72,17 +76,17 @@ function Results() {
                         key={item.id}
                         onClick={() => handleItemClick(item.id)}
                       >
-                        <h4>{item.EventName}</h4>
+                        <h4>{item.Name}</h4>
                         {dateTimeString && <p>{dateTimeString}</p>}
-                        <p>{item.Location}</p>
+                        <p>{item.LocationString}</p>
                       </div>
                     );
                   })}
               </div>
               {selectedEventObj && (
                 <div className="selected-event">
-                  <h4>{selectedEventObj.EventName}</h4>
-                  <h5>{selectedEventObj.Location}</h5>
+                  <h4>{selectedEventObj.Name}</h4>
+                  <h5>{selectedEventObj.LocationString}</h5>
                   <h5>{selectedEventDateTimeString}</h5>
                   <p>{selectedEventObj.Description}</p>
                   <h5>Tags:</h5>
