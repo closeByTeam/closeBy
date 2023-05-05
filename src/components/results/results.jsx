@@ -1,10 +1,9 @@
 import { db } from "../../firebase";
 import { getDocs, collection, where, query } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import Tags from "../tags/tags";
 
 import "./results.css";
-
-import { selected } from "../tags/tags";
 
 function Results() {
   const collectionName = "/Events";
@@ -12,16 +11,16 @@ function Results() {
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedEventDateTimeString, setSelectedEventDateTimeString] = useState(null);
+  
+  console.log(Tags.selectedCategories);
 
   useEffect(() => {
     fetchEvents();
   }, []);
 
   const fetchEvents = async () => {
-    // selected.forEach(element => {
-    //   console.log(element)
-    // });
-    const querySnapshot = await getDocs(collection(db, collectionName), where("Buy and Sell", "in", "Categories"));
+    
+    const querySnapshot = await getDocs(collection(db, collectionName)); //where("Buy and Sell", "in", "Categories"));
     const eventsArray = [];
     querySnapshot.forEach((doc) => {
       eventsArray.push({ ...doc.data(), id: doc.id });
@@ -65,7 +64,7 @@ function Results() {
 
             return (
               <div className="eventList">
-              <div className="item-list">
+                <div className="item-list">
                 {events &&
                   events.map((item) => {
                     const time = item.Time ? item.Time.toDate() : null;

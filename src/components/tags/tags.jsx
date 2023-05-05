@@ -13,6 +13,7 @@ import { purple } from "@mui/material/colors";
 import * as React from "react";
 
 import "./tags.css";
+import Results from "../results/results";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -46,12 +47,11 @@ const theme = createTheme({
   },
 });
 
-export let selected = [];
-
 export default function Tags() {
   const [personName, setPersonName] = React.useState([]);
-
+  let selectedCategories = [];
   const handleChange = (event) => {
+    
     const {
       target: { value },
     } = event;
@@ -59,8 +59,8 @@ export default function Tags() {
       // On autofill we get a stringified value.
       typeof value === "string" ? value.split(",") : value
     );
-    selected = value;
-    console.log(selected);
+    selectedCategories = value;
+    console.log(selectedCategories);
   };
   
 
