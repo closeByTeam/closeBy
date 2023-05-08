@@ -78,7 +78,7 @@ function Results() {
                       >
                         <h4>{item.Name}</h4>
                         {dateTimeString && <p>{dateTimeString}</p>}
-                        <p>{item.LocationString}</p>
+                        <p className="location">{item.LocationString}</p>
                       </div>
                     );
                   })}
@@ -98,9 +98,6 @@ function Results() {
                     <p>
                       <a href="" target="_blank">Learn More</a>
                     </p>
-                  </div>
-                  <div className="rsvp">
-                    <a href="" target="_blank">RSVP</a>
                   </div>
                 </div>
               )}
