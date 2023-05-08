@@ -20,7 +20,7 @@ function Results() {
 
   const fetchEvents = async () => {
     
-    const querySnapshot = await getDocs(collection(db, collectionName)); //where("Buy and Sell", "in", "Categories"));
+    const querySnapshot = await getDocs(collection(db, collectionName)); //where("Buy and Sell", "in", "Categories")); //this is how you seperate by categories
     const eventsArray = [];
     querySnapshot.forEach((doc) => {
       eventsArray.push({ ...doc.data(), id: doc.id });
