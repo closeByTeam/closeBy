@@ -7,3 +7,6 @@ export { default as Results } from './results/results';
 export { default as Support } from './support/support';
 export { default as Calendar } from './calendar/calendar';
 export { default as Loader } from './loader/loader';
+export { default as Distance } from './distance/distance';
+export { default as Location } from './location/location';
+export { default as MultiStepForm } from './multistepform/multistepform';

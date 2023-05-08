@@ -69,6 +69,22 @@ export default function Tags() {
       <Box
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
+            <Typography
+        sx={{
+          fontFamily: 'ZonaBlack, sans-serif',
+          fontSize: '30px',
+          paddingBottom: '2px',
+          paddingTop: '25px',
+          color: '#c784ee',
+        }}
+        id="Slider2"
+        gutterBottom
+      >
+        pick your interests
+      </Typography>
+      </Box>
+      <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        
         <div>
           <FormControl
             sx={{

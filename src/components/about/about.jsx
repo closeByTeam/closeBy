@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 
-export const about = () => (
+const about = () => (
     <div className='aboutPage'>
       <h1>about our diocese</h1>
       <div className='info'>
@@ -21,7 +21,6 @@ export const about = () => (
       </div>
     </div>
   );
-
-  export default about;
-
+  
+export default about;
 
