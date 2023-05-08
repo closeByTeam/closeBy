@@ -1,3 +1,5 @@
+import { fromJSON } from 'postcss';
+
 export { default as About } from './about/about';
 export { default as Navbar } from './navbar/navbar';
 export { default as Homepage } from './homepage/homepage';
@@ -10,3 +12,4 @@ export { default as Loader } from './loader/loader';
 export { default as Distance } from './distance/distance';
 export { default as Location } from './location/location';
 export { default as MultiStepForm } from './multistepform/multistepform';
+export { default as DotCounter } from './dotcounter/dotcounter';

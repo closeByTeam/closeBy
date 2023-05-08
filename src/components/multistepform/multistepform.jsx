@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Distance, Calendar, Tags, Location } from '..';
+import { Distance, Calendar, Tags, Location, DotCounter } from '..';
 
 import NextIcon from '../../images/icons/circle-arrow-right.svg';
 import PrevIcon from '../../images/icons/circle-arrow-left.svg';
@@ -48,6 +48,7 @@ const multistepform = () => {
     {step === 1 && (
         <div className='container3'>
              <Distance nextStep={nextStep} />
+            <DotCounter numSteps={4} currentStep={1} />
         </div>
     )}
       {step === 2 && (
@@ -57,6 +58,7 @@ const multistepform = () => {
           </button>
           <div className='container2'>
           <Calendar nextStep={nextStep} prevStep={prevStep} />
+          <DotCounter numSteps={4} currentStep={2} />
           </div>
         </div>
       )}
@@ -67,6 +69,7 @@ const multistepform = () => {
           </button>
           <div className='container2'>
           <Tags nextStep={nextStep} prevStep={prevStep} />
+          <DotCounter numSteps={4} currentStep={3} />
           </div>
         </div>
       )}
@@ -80,6 +83,7 @@ const multistepform = () => {
           </button>
           <div className='container2'>
           <Location prevStep={prevStep} />
+          <DotCounter numSteps={4} currentStep={4} />
           </div>
         </div>
       )}
