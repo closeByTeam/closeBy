@@ -1,15 +1,20 @@
 .aboutPage{
     font-family: Helvetica, sans-serif;
     background-image: url("../../images/home-page-bg.jpg");
-    margin-top: -70px;
     height: 100%;
-    width: 100%;
-    margin-bottom: -50px;
+    width: 50%;
+    margin: auto;
+    margin-top: -4rem;
 }
 
 .aboutPage h1{
-    padding-top: 60px;
     font-size: 75px;
+    margin-bottom: 1rem;
+
+}
+
+.info h2{
+    margin-bottom: 1rem;
 }
 
 .info p{
