@@ -57,7 +57,8 @@
 }
 
 .container2 {
-    padding: 250px;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 .container3 {
     padding: 170px;
