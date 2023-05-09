@@ -5,7 +5,7 @@ import './publisher.css';
 const PublisherViewEvent = ({handleModify}) => {
 
     //eventArray will be the events in the database that are visible to the publisher
-    const eventArray = [<EventForm />, <EventForm />, <EventForm />] //instead of eventForm use the prexisting event mockup
+    const eventArray = [<EventForm />] //instead of eventForm use the prexisting event mockup
     //modify event will bring up the form to add an event only it will be prefilled with the data from the event selected for modification
     //modify event will pass the data to the form in publisher home and set the state to display the form
     const listEvents = eventArray.map((events) =>
