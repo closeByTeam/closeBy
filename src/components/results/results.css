@@ -109,3 +109,13 @@
 .link a:hover {
   color: #7704ba;
 }
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Show scrollbar for specific element with class "scrollable" */
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
