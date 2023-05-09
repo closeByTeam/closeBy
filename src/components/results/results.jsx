@@ -78,7 +78,7 @@ function Results() {
                       >
                         <h4>{item.Name}</h4>
                         {dateTimeString && <p>{dateTimeString}</p>}
-                        <p className="location">{item.LocationString}</p>
+                        <p className="location">{item.Location}</p>
                       </div>
                     );
                   })}
@@ -86,14 +86,14 @@ function Results() {
               {selectedEventObj && (
                 <div className="selected-event">
                   <h4>{selectedEventObj.Name}</h4>
-                  <h5>{selectedEventObj.LocationString}</h5>
+                  <h5>{selectedEventObj.Location}</h5>
                   <h5>{selectedEventDateTimeString}</h5>
                   <p>{selectedEventObj.Description}</p>
                   <h5>Tags:</h5>
                   <div className="tags">
                   <p>{selectedEventObj.Category}</p>
                   </div>
-                  <p>{selectedEventObj.Publisher.Account} </p>
+                  <p>{selectedEventObj.Publisher} </p>
                   <div className="link">
                     <p>
                       <a href="" target="_blank">Learn More</a>
