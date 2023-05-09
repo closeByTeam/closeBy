@@ -33,4 +33,12 @@
     margin: 15px;
   
   }
+
+  .app-logo{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
   
