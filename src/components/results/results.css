@@ -78,13 +78,15 @@
 }
 
 .tags p {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 0;
-}
-
-.tags p:not(:last-child):after {
-  content: ",";
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #7704ba;
+  color: white;
+  border-radius: 5px;
   margin-right: 5px;
+  font-size: 30px;
 }
 
 .tags p:last-child:after {
