@@ -93,7 +93,7 @@ function Results() {
                   <div className="tags">
                   <p>{selectedEventObj.Category}</p>
                   </div>
-                  <p>{selectedEventObj.Publisher.Account} </p>
+                  <p>{selectedEventObj.Publisher} </p>
                   <div className="link">
                     <p>
                       <a href="" target="_blank">Learn More</a>
