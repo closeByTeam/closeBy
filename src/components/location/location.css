@@ -1,0 +1,39 @@
+
+.location-button svg {
+    height: 70px;
+    width: 70px;
+    fill: #7704ba;
+}
+
+.location-button {
+    display: flex;
+}
+
+.container {
+    height: auto;
+    width: auto;
+    display: flex;
+}
+
+.button {
+    background: none;
+	border: none;
+	cursor: pointer;
+    fill: #7704ba;
+}
+
+.button:hover svg {
+    fill: #C784EE;
+}
+
+.button:hover h2 {
+    color: #C784EE;
+}
+.search-button {
+    height: 60px;
+    width: 60px;
+    background: none;
+	border: none;
+	cursor: pointer;
+    fill: #7704ba;
+}

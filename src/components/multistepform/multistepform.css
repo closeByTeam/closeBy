@@ -53,6 +53,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    margin-left: -50px;
 }
 
 .container2 {
@@ -60,4 +61,7 @@
 }
 .container3 {
     padding: 170px;
+}
+
+.go-button {
 }

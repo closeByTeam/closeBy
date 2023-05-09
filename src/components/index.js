@@ -13,3 +13,4 @@ export { default as Distance } from './distance/distance';
 export { default as Location } from './location/location';
 export { default as MultiStepForm } from './multistepform/multistepform';
 export { default as DotCounter } from './dotcounter/dotcounter';
+export { default as LocationAutoComplete } from './locationautocomplete/locationautocomplete';

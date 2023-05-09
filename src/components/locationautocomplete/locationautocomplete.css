@@ -1,0 +1,9 @@
+.input {
+    height: 70px;
+    width: 300px;
+    background: none;
+    border: none;
+}
+.MuiInputBase-input MuiFilledInput-input css-10botns-MuiInputBase-input-MuiFilledInput-input pac-target-input {
+    color: purple;
+}

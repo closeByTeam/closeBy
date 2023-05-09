@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Distance, Calendar, Tags, Location, DotCounter } from '..';
-
+import Button from '@mui/material/Button';
 import NextIcon from '../../images/icons/circle-arrow-right.svg';
 import PrevIcon from '../../images/icons/circle-arrow-left.svg';
-
+import { styled } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
 import './multistepform.css';
+
+const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: purple[500],
+    '&:hover': {
+      backgroundColor: purple[700],
+    },
+  }));
 
 const motionVariants = {
   enter: {
@@ -85,6 +94,14 @@ const multistepform = () => {
           <Location prevStep={prevStep} />
           <DotCounter numSteps={4} currentStep={4} />
           </div>
+          <div className='go-button'>
+            <ColorButton variant="contained" size="large" sx={{backgroundColor: '#7704ba', width: '10px', height:'40px', fontSize: '20px'}}
+                        onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href=`/results${location ? `?latitude=${location.latitude}&longitude=${location.longitude}` : ''}`;
+                        }}
+                        >go!</ColorButton>
+            </div>
         </div>
       )}
       {step !== 4 && (
