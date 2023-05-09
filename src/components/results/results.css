@@ -59,7 +59,7 @@
   color: white;
   font-size: 60px;
   margin-bottom: 0;
-  margin-top: .5rem;
+  margin-top: 1rem;
   font-family: ZonaBlack, sans-serif;
   text-transform: uppercase;
 }
@@ -68,25 +68,36 @@
   color: #7704ba;
   font-size: 30px;
   font-family: ZonaBlack, sans-serif;
-  margin-top: 0rem;
+  margin-top: -.5rem;
   margin-bottom: 0rem;
 }
 
+.selected-event h6 {
+  color: #7704ba;
+  font-size: 20px;
+  font-family: ZonaBlack, sans-serif;
+  margin-top: -.5rem;
+  margin-bottom: 0rem;
+}
+
+
 .selected-event p{
   color: white;
-  font-family: ZonaBlack, sans-serif;
+  font-family: Helvetica, sans-serif;
+  padding-right: 20px;
 }
 
 .tags p {
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 0;
   display: inline-block;
-  padding: 20px 40px;
+  padding: 5px 15px;
   background-color: #7704ba;
-  color: white;
+  color: #c784ee;
   border-radius: 5px;
   margin-right: 5px;
-  font-size: 30px;
+  font-size: 15px;
+  font-family: ZonaBlack, sans-serif;
 }
 
 .tags p:last-child:after {
@@ -94,22 +105,32 @@
 }
 
 .link {
-  margin-top: 10px;
-}
+  margin-top: -10px;
 
-.link p {
-  margin: 0;
 }
 
 .link a {
+  font-family: ZonaBlack, sans-serif;
+  margin-top: -10px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  color: #7704ba;
 }
 
-.link a:hover {
-  color: #7704ba;
+.link:hover a{
+  color: lightgray;
+}
+
+.link:hover svg {
+  fill: lightgray;
+}
+
+.link svg {
+  height: 15px;
+  width: 15px;
+  margin-left: 5px;
+  fill: #7704ba;
 }
 
 /* Hide scrollbar for all elements */
@@ -120,4 +141,7 @@
 /* Show scrollbar for specific element with class "scrollable" */
 .scrollable::-webkit-scrollbar {
   display: none;
+}
+
+.published-by p {
 }
