@@ -8,16 +8,19 @@
 .item-list {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  height: 650px;
+  overflow-y: scroll;
 }
 
 .item-container {
   color: white;
   padding-right: 1rem;
   padding-left: 1rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #7704ba;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
   text-align: center;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -48,6 +51,8 @@
   padding-left: 1rem;
   padding-bottom: 1rem;
   background-color: #c784ee;
+  height: 650px;
+  overflow-y: scroll;
 }
 
 .selected-event h4 {
