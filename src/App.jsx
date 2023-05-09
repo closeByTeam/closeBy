@@ -31,8 +31,7 @@ function App () {
   let component 
   switch (window.location.pathname) {
     case "/":
-      component = <PublisherHome/>
-      //component = <Login onSave={transitionToPublisherHome}/> 
+      component = <Login onSave={transitionToPublisherHome}/> 
       break 
     case "/about":
       component = <About />
