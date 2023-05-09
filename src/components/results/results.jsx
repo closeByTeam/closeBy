@@ -56,7 +56,10 @@ function Results() {
   
     const selectedEventObj = events.find((event) => event.id === itemId);
     const time = selectedEventObj.Time ? selectedEventObj.Time.toDate() : null;
-    setSelectedEventDateTimeString(time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString()}` : null);
+    setSelectedEventDateTimeString(
+      time ? `${time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}` : null
+    );
+    
   };
   
 
@@ -68,7 +71,8 @@ function Results() {
                 {events &&
                   events.map((item) => {
                     const time = item.Time ? item.Time.toDate() : null;
-                    const dateTimeString = time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString()}` : null;
+                    const dateTimeString = time ? `${time.toLocaleDateString()} ${time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: true})}` : null;
+
             
                     return (
                       <div
